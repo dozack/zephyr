@@ -7,7 +7,7 @@
 
 if SOC_SERIES_TI_TMS570LC43X
 
-source "soc/arm/ti_tms570lc43x/Kconfig.defconfig.tms570lc43*"
+source "soc/arm/ti_hercules/tms570lc43x/Kconfig.defconfig.tms570lc43*"
 
 config SOC_SERIES
 	default "TMS570LC43x"

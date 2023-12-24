@@ -8,6 +8,6 @@
 if BOARD_TI_LAUNCHXL2_TMS570LC4357
 
 config BOARD
-        default "TI_LAUNCHXL2_TMS570LC4357"
+        default "ti_launchxl2_tms570lc457"
 
 endif

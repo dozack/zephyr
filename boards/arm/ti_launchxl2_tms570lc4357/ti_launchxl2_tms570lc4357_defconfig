@@ -4,13 +4,3 @@
 # Copyright (C) 2023 Zoltan Dolensky
 #
 # SPDX-License-Identifier: Apache-2.0
-
-identifier: ti_launchxl2_tms570lc457
-name: TI-Hercules-TMS570LC43x-LaunchPad
-type: mcu
-arch: arm
-ram: 512
-toolchain:
-  - zephyr
-  - gnuarmemb
-  - xtools
