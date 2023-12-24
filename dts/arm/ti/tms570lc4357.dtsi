@@ -1,0 +1,24 @@
+/**
+ * Texas Instruments Hercules MCU Family
+ *
+ * Copyright (c) 2023 Texas Instruments Incorporated
+ * Copyright (C) 2023 Zoltan Dolensky
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <arm/ti/tms570lc43x.dtsi>
+
+/ {
+    model = "ti,tms570lc4357";
+    compatible = "ti,tms570lc4357", "ti,tms570lc43x", "simple-bus";
+
+    #address-cells = <1>;
+    #size-cells = <1>;
+
+    soc {
+        sram0: memory@0 {
+            reg = <0x08000000 DT_SIZE_K(512)>;
+        };
+    };
+};

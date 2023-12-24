@@ -1,0 +1,15 @@
+# Texas Instruments Hercules MCU Family
+#
+# Copyright (c) 2023 Texas Instruments Incorporated
+# Copyright (C) 2023 Zoltan Dolensky
+#
+# SPDX-License-Identifier: Apache-2.0
+
+choice
+	prompt "TI Hercules TMS570LC43x SoC"
+	depends on SOC_SERIES_TI_TMS570LC43X
+
+config SOC_TI_TMS570LC4357
+	bool "TI TMS570LC4357"
+
+endchoice

@@ -1,0 +1,13 @@
+# Texas Instruments Hercules MCU Family
+#
+# Copyright (c) 2023 Texas Instruments Incorporated
+# Copyright (C) 2023 Zoltan Dolensky
+#
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_TI_LAUNCHXL2_TMS570LC4357
+
+config BOARD
+        default "TI_LAUNCHXL2_TMS570LC4357"
+
+endif

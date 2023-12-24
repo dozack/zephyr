@@ -1,0 +1,10 @@
+# Texas Instruments Hercules MCU Family
+#
+# Copyright (c) 2023 Texas Instruments Incorporated
+# Copyright (C) 2023 Zoltan Dolensky
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC
+	default "TMS570LC4357"
+	depends on SOC_TI_TMS570LC4357

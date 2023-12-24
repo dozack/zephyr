@@ -1,0 +1,19 @@
+# Texas Instruments Hercules MCU Family
+#
+# Copyright (c) 2023 Texas Instruments Incorporated
+# Copyright (C) 2023 Zoltan Dolensky
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_FAMILY_TI_HERCULES
+	bool
+
+if SOC_FAMILY_TI_HERCULES
+
+config SOC_FAMILY
+	string
+	default "ti_hercules"
+
+source "soc/arm/ti_hercules/*/Kconfig.soc"
+
+endif

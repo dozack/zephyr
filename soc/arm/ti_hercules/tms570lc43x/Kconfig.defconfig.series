@@ -1,0 +1,27 @@
+# Texas Instruments Hercules MCU Family
+#
+# Copyright (c) 2023 Texas Instruments Incorporated
+# Copyright (C) 2023 Zoltan Dolensky
+#
+# SPDX-License-Identifier: Apache-2.0
+
+if SOC_SERIES_TI_TMS570LC43X
+
+source "soc/arm/ti_tms570lc43x/Kconfig.defconfig.tms570lc43*"
+
+config SOC_SERIES
+	default "TMS570LC43x"
+
+config NUM_IRQS
+	default 128
+
+config SYS_CLOCK_HW_CYCLES_PER_SEC
+	default 100000000
+
+config SYS_CLOCK_TICKS_PER_SEC
+	default 1000
+
+config KERNEL_ENTRY
+	default "_vector_table"
+
+endif

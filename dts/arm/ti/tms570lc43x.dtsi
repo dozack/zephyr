@@ -1,0 +1,40 @@
+/**
+ * Texas Instruments Hercules MCU Family
+ *
+ * Copyright (c) 2023 Texas Instruments Incorporated
+ * Copyright (C) 2023 Zoltan Dolensky
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <mem.h>
+#include <freq.h>
+#include <arm/armv7-r.dtsi>
+#include <zephyr/dt-bindings/interrupt-controller/ti-vim.h>
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+    model = "ti,tms570lc43x";
+    compatible = "ti,tms570lc4357", "ti,tms570lc43x", "simple-bus";
+
+    #address-cells = <1>;
+    #size-cells = <1>;
+
+    cpus {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        cpu0: cpu@0 {
+            compatible = "arm,cortex-r5f";
+            reg = <0>;
+        };
+    };
+
+    soc {
+        vim0: interrupt-controller@fffffd00 {
+            compatible = "ti,vim";
+            reg = <0xfffffd00 0x200>;
+            status = "okay";
+        };
+    };
+};
