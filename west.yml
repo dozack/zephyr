@@ -242,7 +242,7 @@ manifest:
         - hal
     - name: hal_ti
       remote: dozack
-      revision: 95cfb980bd3d9c3c5a1feae7e4ebf8b25a572d8a
+      revision: 4e001489d91e1e0ae8b4186d8bdb53ac7f2305e7
       path: modules/hal/ti
       groups:
         - hal
