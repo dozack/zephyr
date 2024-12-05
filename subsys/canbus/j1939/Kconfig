@@ -1,0 +1,19 @@
+#
+# Copyright (c) 2024 Zoltan Dolensky
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig J1939
+	bool "SAE J1939 protocol"
+	depends on CAN
+	help
+	  Enable SAE J1939 support for CAN
+
+if J1939
+
+module = J1939
+module-str = J1939
+source "subsys/logging/Kconfig.template.log_config"
+
+endif # J1939
