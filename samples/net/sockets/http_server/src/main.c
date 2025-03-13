@@ -248,7 +248,7 @@ struct http_resource_detail_websocket ws_netstats_resource_detail = {
 #if defined(CONFIG_NET_SAMPLE_HTTP_SERVICE)
 static uint16_t test_http_service_port = CONFIG_NET_SAMPLE_HTTP_SERVER_SERVICE_PORT;
 HTTP_SERVICE_DEFINE(test_http_service, NULL, &test_http_service_port, 1,
-		    10, NULL);
+		    10, NULL, NULL);
 
 HTTP_RESOURCE_DEFINE(index_html_gz_resource, test_http_service, "/",
 		     &index_html_gz_resource_detail);
@@ -281,7 +281,7 @@ static const sec_tag_t sec_tag_list_verify_none[] = {
 
 static uint16_t test_https_service_port = CONFIG_NET_SAMPLE_HTTPS_SERVER_SERVICE_PORT;
 HTTPS_SERVICE_DEFINE(test_https_service, NULL,
-		     &test_https_service_port, 1, 10, NULL,
+		     &test_https_service_port, 1, 10, NULL, NULL,
 		     sec_tag_list_verify_none, sizeof(sec_tag_list_verify_none));
 
 HTTP_RESOURCE_DEFINE(index_html_gz_resource_https, test_https_service, "/",
@@ -310,16 +310,6 @@ static void setup_tls(void)
 #if defined(CONFIG_NET_SAMPLE_HTTPS_SERVICE)
 #if defined(CONFIG_NET_SOCKETS_SOCKOPT_TLS)
 	int err;
-
-#if defined(CONFIG_NET_SAMPLE_CERTS_WITH_SC)
-	err = tls_credential_add(HTTP_SERVER_CERTIFICATE_TAG,
-				 TLS_CREDENTIAL_CA_CERTIFICATE,
-				 ca_certificate,
-				 sizeof(ca_certificate));
-	if (err < 0) {
-		LOG_ERR("Failed to register CA certificate: %d", err);
-	}
-#endif /* defined(CONFIG_NET_SAMPLE_CERTS_WITH_SC) */
 
 	err = tls_credential_add(HTTP_SERVER_CERTIFICATE_TAG,
 				 TLS_CREDENTIAL_SERVER_CERTIFICATE,
