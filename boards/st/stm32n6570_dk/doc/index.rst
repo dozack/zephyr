@@ -95,6 +95,17 @@ Default Zephyr Peripheral Mapping:
 - USART_1_RX : PE6
 - USART_2_TX : PD5
 - USART_2_RX : PF6
+- XSPI2_NCS1 : PN1
+- XSPI2_DQS0 : PN0
+- XSPI2_CLK : PN6
+- XSPI2_IO0 : PN2
+- XSPI2_IO1 : PN3
+- XSPI2_IO2 : PN4
+- XSPI2_IO3 : PN5
+- XSPI2_IO4 : PN8
+- XSPI2_IO5 : PN9
+- XSPI2_IO6 : PN10
+- XSPI2_IO7 : PN11
 
 System Clock
 ------------
@@ -167,12 +178,6 @@ First, connect the STM32N6570_DK to your host computer using the ST-Link USB por
             * BOOT1: 0
 
 	    Power off and on the board again.
-
-         Run a serial host program to connect to your board:
-
-         .. code-block:: console
-
-            $ minicom -D /dev/ttyACM0
 
       .. group-tab:: Serial Boot Loader (USB)
 
