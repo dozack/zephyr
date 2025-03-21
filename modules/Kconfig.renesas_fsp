@@ -159,6 +159,11 @@ config USE_RA_FSP_ACMPHS
 	help
 	  Enable RA FSP ACMPHS driver
 
+config USE_RA_FSP_WDT
+	bool
+	help
+	  Enable RA FSP WDT driver
+
 endif # HAS_RENESAS_RA_FSP
 
 if HAS_RENESAS_RZ_FSP
@@ -197,6 +202,12 @@ config USE_RZ_FSP_EXT_IRQ
 	bool
 	help
 	  Enable RZ FSP External IRQ driver
+
+config USE_RZ_FSP_DMA
+	bool
+	help
+	  Enable RZ FSP DMA driver
+
 config USE_RZ_FSP_MHU
 	bool
 	help
@@ -206,5 +217,15 @@ config USE_RZ_FSP_CPG
 	bool
 	help
 	  Enable RZ FSP CLOCK CONTROL driver
+
+config USE_RZ_FSP_SCI_UART
+	bool
+	help
+	  Enable RZ FSP SCI UART driver
+
+config USE_RZ_FSP_EXT_IRQ
+	bool
+	help
+	  Enable RZ FSP External IRQ driver
 
 endif
